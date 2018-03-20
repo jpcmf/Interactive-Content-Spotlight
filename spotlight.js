@@ -32,13 +32,25 @@ $(document).ready(function() {
   var owl = $('.owl-carousel');
   owl.owlCarousel({
     dots:true,
-    nav:true,
-    items:5,
+    nav:false,
+    items:7,
     loop:true,
     margin:30,
     autoplay:true,
     autoplayTimeout:3000,
-    autoplayHoverPause:true
+    autoplayHoverPause:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        600:{
+            items:4,
+          },
+        1200:{
+            // items:6
+        }
+    }
   });
 
   // init Masonry
@@ -46,6 +58,23 @@ $(document).ready(function() {
     itemSelector: '.grid-item',
     percentPosition: true,
     columnWidth: '.grid-sizer'
+  });
+
+  grid.imagesLoaded().progress(function() {
+    grid.masonry();
+  });
+
+  // open hide Content
+  var displayArea = $('#displayArea');
+  var closeButton = $('#closeButton');
+  displayArea.hide();
+  $('.grid').on('click', function() {
+    displayArea.show();
+    displayArea.animate({bottom: '0'});
+  });
+  closeButton.on('click', function(e) {
+    e.preventDefault();
+    displayArea.animate({bottom: '-400px'});
   });
 
 });
