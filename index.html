@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calipage - Interactive Content Spotlight</title>
+
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.2/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.2/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- <style>
+  .animatedIn .ic img{opacity:1}
+  .animatedIn .colorways img{opacity:0;-webkit-animation:FadeIn .5s ease-in;animation:FadeIn .5s ease-in;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-transition:all 1s;transition:all 1s}
+  .animatedIn .pulse-dot{-webkit-animation:FadeUpIn .5s ease-in;animation:FadeUpIn .5s ease-in;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;-webkit-transition:all 1s;transition:all 1s}
+  .animatedIn .pulse-dot:nth-child(6){-webkit-animation-delay:1s}
+  .animatedIn .pulse-dot:nth-child(5){-webkit-animation-delay:1.2s}
+  .animatedIn .pulse-dot:nth-child(7){-webkit-animation-delay:1.4s}
+  .animatedIn .column:nth-child(1) img{-webkit-animation-delay:0s}
+  .animatedIn .column:nth-child(2) img{-webkit-animation-delay:.25s}
+  .animatedIn .column:nth-child(3) img{-webkit-animation-delay:.5s}
+  </style> -->
+</head>
+<body>
+<h1 class="text-center">Interactive Content Spotlight</h1>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dropdown-submenu">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="images/logo-calipage.png" alt="Calipage">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="dropdown-submenu">
+      <!-- <ul class="nav navbar-nav"> -->
+        <!-- Basic structure -->
+        <!-- <li class="dropdown menu-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">First level</a>
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a href="#">Second level</a>
+              <div class="submenu">
+                <ul>
+                  <li><a href="#">Third level</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>  -->
+        <!-- end -->
+      <!-- </ul> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<main>
+  <div class="container-fluid">
+    <div class="row">
+      <figure class="animatedIn">
+        <img class="img-responsive" src="images/desk-accessories.jpg" alt="desk">
+        <div class="pulse-dot pulse1" data-target=".zoomin-image-1">
+          <div class="dot"></div>
+          <div class="pulse"></div>
+          <div id="" class="zoomin-image zoomin-image-1" style="display:none;">
+            <img src="images/keyboard.png" alt="thumb">
+            <hr>
+            <div class="description">
+              <h3>Nome do produto</h3>
+              <p>Estructura reforzada. Se puede superponer formando conjuntos de archivo. Tres pestañas de acoplamiento. Para folio y A4. Dimensiones A4 280 x 365 x 140 mm. Pack 10 unidades.</p>
+            </div>
+            <button>Añadir a la cesta</button>
+          </div>
+        </div>
+
+        <div class="pulse-dot pulse2" data-target=".zoomin-image-2">
+          <div class="dot"></div>
+          <div class="pulse"></div>
+          <div id="" class="zoomin-image zoomin-image-2" style="display:none;">
+            <img src="images/keyboard.png" alt="thumb">
+            <hr>
+            <div class="description">
+              <h3>Nome do produto</h3>
+              <p>Estructura reforzada. Se puede superponer formando conjuntos de archivo. Tres pestañas de acoplamiento. Para folio y A4. Dimensiones A4 280 x 365 x 140 mm. Pack 10 unidades.</p>
+            </div>
+            <button>Añadir a la cesta</button>
+          </div>
+        </div>
+
+        <div class="pulse-dot pulse3" data-target=".zoomin-image-3">
+          <div class="dot"></div>
+          <div class="pulse"></div>
+          <div id="" class="zoomin-image zoomin-image-3" style="display:none;">
+            <img src="images/mouse.jpg" alt="thumb">
+            <hr>
+            <div class="description">
+              <h3>Nome do produto</h3>
+              <p>Estructura reforzada. Se puede superponer formando conjuntos de archivo. Tres pestañas de acoplamiento. Para folio y A4. Dimensiones A4 280 x 365 x 140 mm. Pack 10 unidades.</p>
+            </div>
+            <button>Añadir a la cesta</button>
+          </div>
+        </div>
+      </figure>
+    </div>
+    <div class="row">
+      <h2 class="text-center">Shop this print</h2>
+      <hr>
+      <div class="owl-carousel owl-theme">
+        <div><img src="images/product-carousel.png" alt=""></div>
+        <div><img src="images/product-carousel.png" alt=""></div>
+        <div><img src="images/product-carousel.png" alt=""></div>
+        <div><img src="images/product-carousel.png" alt=""></div>
+        <div><img src="images/product-carousel.png" alt=""></div>
+        <div><img src="images/product-carousel.png" alt=""></div>
+        <div><img src="images/product-carousel.png" alt=""></div>
+        <div><img src="images/product-carousel.png" alt=""></div>
+      </div>
+    </div>
+    <div class="row">
+      <h2 class="text-center">Shop products grid</h2>
+      <hr>
+      <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="grid-item">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+        </div>
+        <div class="grid-item">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+        </div>
+        <div class="grid-item">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/look-out.jpg" />
+        </div>
+        <div class="grid-item">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+        </div>
+        <div class="grid-item">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+        </div>
+        <div class="grid-item">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+        </div>
+        <div class="grid-item">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+        </div>
+        <div class="grid-item">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+        </div>
+        <div class="grid-item">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.2/owl.carousel.min.js"></script>
+<script src="//masonry.desandro.com/masonry.pkgd.js"></script>
+<script src="spotlight.js"></script>
+
+</body>
+</html>
