@@ -11,8 +11,13 @@ body {
 }
 
 .navbar-brand {
+  padding-top: 5px;
   position: relative;
   z-index: 1;
+}
+
+.navbar-brand  img {
+  width: 100px;
 }
 
 /* main image */
@@ -159,7 +164,21 @@ figure .zoomin-image.zoomin-image-3 {
   z-index: 100;
 }
 
+/* product carousel */
+
+.spotlight__carousel {
+  margin-top: 50px;
+}
+
 /* product grid */
+
+.spotlight__grid {
+  margin-top: 50px;
+}
+
+.spotlight__grid hr {
+  margin-bottom: 0;
+}
 
 .grid:after {
   content: '';
@@ -183,11 +202,17 @@ figure .zoomin-image.zoomin-image-3 {
 .grid-item {
   cursor: pointer;
   float: left;
+  opacity: 1;
+  transition: opacity 300ms linear;
 }
 
 .grid-item img {
   display: block;
   max-width: 100%;
+}
+
+.grid-item.active {
+  opacity: 0.5;
 }
 
 .display-area {
@@ -202,10 +227,16 @@ figure .zoomin-image.zoomin-image-3 {
   z-index: 20;
 }
 
+.display-area h2 {
+  margin-top: 0;
+}
+
 .closeButton {
+  height: 10px;
   position: absolute;
+  right: 10px;
   top: 10px;
-  left: 10px;
+  width: 10px;
   z-index: 20;
 }
 

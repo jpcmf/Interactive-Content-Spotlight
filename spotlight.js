@@ -65,16 +65,36 @@ $(document).ready(function() {
   });
 
   // open hide Content
+  var gridItem = $('.grid-item');
   var displayArea = $('#displayArea');
   var closeButton = $('#closeButton');
+
   displayArea.hide();
-  $('.grid').on('click', function() {
-    displayArea.show();
-    displayArea.animate({bottom: '0'});
-  });
-  closeButton.on('click', function(e) {
+
+  gridItem.on('click', function(e) {
     e.preventDefault();
-    displayArea.animate({bottom: '-400px'});
+    gridItem.removeClass('active');
+    $(this).toggleClass('active');
+    displayArea.show().animate({bottom: '0'});
   });
 
+  closeButton.on('click', function(e) {
+    e.preventDefault();
+    closeDisplay();
+  });
+
+  function closeDisplay() {
+    displayArea.animate({bottom: '-400px'});
+    gridItem.removeClass('active');
+  }
+
 });
+
+var addCart = document.querySelectorAll('.addCart');
+console.log(addCart);
+for (var i = 0; i < addCart.length; i++) {
+  addCart[i].addEventListener('click', function(event) {
+    event.preventDefault();
+    console.log('Add to Cart');
+  });
+}
